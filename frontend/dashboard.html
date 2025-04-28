@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Equity Bank Invoice Authentication - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dash-container">
+    <div class="form-header">
+        <img src="logo.jpg" alt="Equity Bank Logo">
+        <h1>Equity Bank Invoice Authentication System - Dashboard</h1>
+    </div>
+
+    <div class="form-section">
+        <h2>Submit Invoice</h2>
+        <input type="text" id="invoice-number" placeholder="Invoice Number (e.g., INV-20250426-001)" required>
+        <input type="date" id="invoice-date" required>
+        <input type="text" id="company-name" placeholder="Company Name" required>
+        <input type="text" id="contact-person" placeholder="Contact Person" required>
+        <input type="text" id="company-phone" placeholder="Company Phone (+2547XXXXXXX)" required>
+        <textarea id="items" placeholder="List of Items (e.g., 2 Laptops, 3 Routers)" required></textarea>
+        <input type="text" id="total-amount" placeholder="Total Amount (e.g., Ksh2000)" required>
+
+        <h3>Your Details</h3>
+        <input type="text" id="user" placeholder="Your Username" required>
+        <input type="text" id="phone" placeholder="Your Phone (+2547XXXXXXX)" required>
+
+        <button onclick="submitInvoice()">Submit Invoice</button>
+        <button onclick="logout()" style="background-color: #a32a29;">Logout</button>
+    </div>
+
+    <div class="form-section">
+        <h2>Verify Invoice</h2>
+        <textarea id="verify-text" placeholder="Paste reconstructed invoice text here to verify..." required></textarea>
+        <button onclick="verifyInvoice()">Verify Invoice</button>
+    </div>
+
+    <div id="response-box" class="response-box"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
